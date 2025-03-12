@@ -1,34 +1,32 @@
 /*
 
-Objective:
-In this activity, you will reinforce the skill of creating and using variables
-while practicing best practices in variable naming conventions through a hands-on,
-interactive coding challenge.
+Part 1: Debugging Challenge
+The JavaScript code below contains intentional bugs related to type conversion.
+Please do the following:
+  - Run the script to observe unexpected outputs.
+  - Debug and fix the errors using explicit type conversion methods like  Number() ,  String() , or    Boolean()  where necessary.
+  - Annotate the code with comments explaining why the fix works.
 
-The code snippet below may include:
-  - Ambiguous or incorrect variable names.
-  - Missing variables that need to be created.
-  - Scenarios that require the use of clear and descriptive variable names.
+Part 2: Write Your Own Examples
+Write their own code that demonstrates:
+  - One example of implicit type conversion.
+  - One example of explicit type conversion.
 
-You will:
-  - Identify Issues: Review the provided code and identify any variable names that:
-  - Are unclear or too vague (e.g., a, b, c).
-  - Do not follow best practices (e.g., camelCase, descriptive naming).
-  - Refactor the Code: Rename the variables and rewrite the program using descriptive names that clearly convey the variable's purpose.
-  - Enhance the Program: Add at least two additional variables to improve the program’s functionality or clarity.
+  *We encourage you to:
+Include at least one edge case, like NaN, undefined, or null .
+Use console.log() to clearly show the before-and-after type conversions.
 
-Things to reflect on:
-  - Why is it important to use meaningful variable names?
-  - What are the common pitfalls to avoid when naming variables?
-  - How do clear variable names benefit team collaboration?
-  
 */
 
-let name = "Alice";
-let itemType = "steaks";
-let amountOfItems = 5;
-let price = 20;
-let store = "the grocery store";
-let shoppingTrip = (name + " bought " + amountOfItems + " " + itemType + " for $" + price + " at " + store + ".");
 
-console.log(shoppingTrip);
+let result = Number("5") - 2; //made 5 a number since it was already doing a subtraction.
+console.log("The result is: " + result);
+
+let isValid = Boolean("false");
+if (isValid) {
+    console.log(Boolean(false)); // made boolean false in console.log to get is valid to be false
+}
+
+let age = Number("25"); // made 25 a number so that total agae would be 25 plus 5 to be 30 instead of 255.
+let totalAge = age + 5;
+console.log("Total Age: " + totalAge);
