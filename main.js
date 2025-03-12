@@ -1,15 +1,35 @@
-//Your application should:
-//1. Use readlineSync.question() to prompt a user for input
-//2. Prompt a user for an index number to find the character at that index
-//3. Use bracket notation to access the character
-//4. Print out the character
+/*
 
-const readline = require('readline-sync');
+Objective:
+Practice using the .length property by calculating the length of
+multiple predefined strings and assigning the results to specific variables.
 
-let word = readline.question("Input word of your choice: ");
+Instructions:
+You will be provided with several predefined string variables.
+Your task is to:
+  - Use the .length property to calculate the length of each string.
+  - Assign the length of each string to its corresponding length variable.
+  - Ensure that each length variable contains the correct value.
 
-console.log("The word you chose is: " + word);
+*/
 
-let indexNum = readline.questionInt("Input index number to find the character of that index: ");
+// Starter Code (Pre-filled):
+// Predefined strings
+let stringOne = "Coding Bootcamp";
+let stringTwo = "JavaScript";
+let stringThree = "";
 
-console.log("The character for you index number is: " + word[indexNum]);
+// Your task: Assign the length of each string to the corresponding variable
+//let lengthOne;   // Length of stringOne
+//let lengthTwo;   // Length of stringTwo
+//let lengthThree; // Length of stringThree
+
+// Your code here
+
+let lengthOne = stringOne.length;
+let lengthTwo = stringTwo.length;
+let lengthThree = stringThree.length;
+
+console.log(lengthOne);
+console.log(lengthTwo);
+console.log(lengthThree);
