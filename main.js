@@ -1,41 +1,25 @@
-/*
+const readline = require('readline-sync');
 
-Part 1: Debugging Challenge
-The JavaScript code below contains intentional bugs related to type conversion.
-Please do the following:
-  - Run the script to observe unexpected outputs.
-  - Debug and fix the errors using explicit type conversion methods like  Number() ,  String() , or    Boolean()  where necessary.
-  - Annotate the code with comments explaining why the fix works.
+let name = readline.question("What is your name? ");
 
-Part 2: Write Your Own Examples
-Write their own code that demonstrates:
-  - One example of implicit type conversion.
-  - One example of explicit type conversion.
+console.log("Hello, " + name + "!");
 
-  *We encourage you to:
-Include at least one edge case, like NaN, undefined, or null .
-Use console.log() to clearly show the before-and-after type conversions.
+let exOrIn = readline.question("Is type casting refering to explicit or inplicit conversion? ");
 
-*/
+console.log("It is explicit and you entered: " + exOrIn);
 
+let varType = readline.question("Do you use const or let when you don't want your variable to be changable? ");
 
-let result = Number("5") - 2; //made 5 a number since it was already doing a subtraction.
-console.log("The result is: " + result);
+console.log("Correct! it is: " + varType);
 
-let isValid = Boolean("false");
-if (isValid) {
-    console.log(Boolean(false)); // made boolean false in console.log to get is valid to be false
-}
+let num = readline.questionInt("Please enter a number as a number, not a sting or other variable type ");
 
-let age = Number("25"); // made 25 a number so that total agae would be 25 plus 5 to be 30 instead of 255.
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+console.log("You wrote the number: " + num);
 
-let b = 5;
-let c = null;
-let result3 = b + c; // number + null = number (null is 0)
-console.log("result3:", result3, ", type(result3):", typeof result3);
+let city = readline.question("In the code: let city = New York; console.log(city); city = Los Angeles; console.log(city) ");
 
-let floatString = "3.14";
-let floatNumber = parseFloat(floatString); // Explicitly convert string to float
-console.log("floatNumber:", floatNumber, ", type:", typeof floatNumber);
+console.log("The correct city would be Los Angeles, you dont need to specify let everytime. You entered: " + city);
+
+let keyword = readline.question("Please name a reserved keyword that you can not use for variable naming: ");
+
+console.log("You could have said let, var, const, or typeof and you entered: " + keyword);
