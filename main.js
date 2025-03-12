@@ -1,25 +1,15 @@
+//Your application should:
+//1. Use readlineSync.question() to prompt a user for input
+//2. Prompt a user for an index number to find the character at that index
+//3. Use bracket notation to access the character
+//4. Print out the character
+
 const readline = require('readline-sync');
 
-let name = readline.question("What is your name? ");
+let word = readline.question("Input word of your choice: ");
 
-console.log("Hello, " + name + "!");
+console.log("The word you chose is: " + word);
 
-let exOrIn = readline.question("Is type casting refering to explicit or inplicit conversion? ");
+let indexNum = readline.questionInt("Input index number to find the character of that index: ");
 
-console.log("It is explicit and you entered: " + exOrIn);
-
-let varType = readline.question("Do you use const or let when you don't want your variable to be changable? ");
-
-console.log("Correct! it is: " + varType);
-
-let num = readline.questionInt("Please enter a number as a number, not a sting or other variable type ");
-
-console.log("You wrote the number: " + num);
-
-let city = readline.question("In the code: let city = New York; console.log(city); city = Los Angeles; console.log(city) ");
-
-console.log("The correct city would be Los Angeles, you dont need to specify let everytime. You entered: " + city);
-
-let keyword = readline.question("Please name a reserved keyword that you can not use for variable naming: ");
-
-console.log("You could have said let, var, const, or typeof and you entered: " + keyword);
+console.log("The character for you index number is: " + word[indexNum]);
