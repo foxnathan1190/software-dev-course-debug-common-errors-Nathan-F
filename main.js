@@ -30,3 +30,12 @@ if (isValid) {
 let age = Number("25"); // made 25 a number so that total agae would be 25 plus 5 to be 30 instead of 255.
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+
+let b = 5;
+let c = null;
+let result3 = b + c; // number + null = number (null is 0)
+console.log("result3:", result3, ", type(result3):", typeof result3);
+
+let floatString = "3.14";
+let floatNumber = parseFloat(floatString); // Explicitly convert string to float
+console.log("floatNumber:", floatNumber, ", type:", typeof floatNumber);
