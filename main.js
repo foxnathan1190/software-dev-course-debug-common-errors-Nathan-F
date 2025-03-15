@@ -1,68 +1,63 @@
 /*
 
-Objective:
-You will practice creating and combining boolean expressions
-to drive logic and outcomes in you program.
+Overview
+In this activity, you will receive three short JavaScript programs,
+each containing a different type of error (syntax, runtime, and logic)
+along with a brief explanation of what the program is supposed to do.
+Your task is to identify the error, correct it, and verify the fix.
 
-Instructions:
-If you are not familiar with the concept of a text-based adventure game,
-let's set the scene...
-Example: "You wake up in a dark forest. There are two paths ahead of you:
-one leading to the mountains and one to a village.
-Your choices will determine your fate!"
+Instructions
+Debugging Steps:
+  - Identify the error type (syntax, runtime, or logic).
+  - Use Debugging Techniques such as reading error messages, using console.log(), or testing in small steps.
+  - Propose a Fix that addresses the error.
+  - Verify the Solution by running the code again to ensure the program works as intended.
 
-Define the Requirements: You must:
-  - Write conditional statements to handle player choices.
-  - Use boolean expressions to combine multiple conditions.
-  - Include at least one use of logical operators (&&, ||, !).
-
-Starter Code:
-  - Run the following command in your terminal to install the readline-sync module:
-    npm install readline-sync
-
-Paste the following code into your editor:
+Reflection:
+Think about which debugging methods you found most useful and how you might apply them in future projects.
 
 */
 
-const readline = require('readline-sync');
+// Programs and Solutions
 
-const hasTorch = true;
-const hasMap = false;
+// Program A
+// Description:
+// This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("You see two paths: one leads to the mountains, the other to the village.");
-const choice = readline.question("Do you go to the 'mountains' or the 'village'?");
+console.log("Welcome to the bootcamp");
 
-if (choice === "mountains" && hasTorch) {
-  console.log("You safely navigate through the dark mountains.");
-} else if (choice === "mountains" && !hasTorch) {
-  console.log("It's too dark to proceed. You decide to turn back.");
-} else if (choice === "village" || hasMap) {
-  console.log("You find your way to the village.");
-} else {
-  console.log("You get lost and wander aimlessly.");
-}
-
-const hasSword = true;
-const hasCompass = true
-
-console.log("You come across a fearsome beast: you can fight it or flee.");
-const choice2 = readline.question("Do you draw your sword and fight or do you run and flee?");
-
-if (choice2 === "fight" && hasSword) {
-    console.log("You fiight hard and prevail, killing the monster.")
-} else if (choice2 === "fight" && !hasSword) {
-    console.log("You fight coragiously and fall to the beast.");
-} else if (choice2 === ("flee" || hasSword) && hasCompass) {
-    console.log("You get away, either by scaring the beast with your sword and running or by running immediately and find your way home.");
-} else {
-    console.log("You get lost and the beast sneaks up behind you and kills you.");
-}
-
-/* 
-
-Add Customization and expand the game:
-  - Add more choices and scenarios.
-  - Include additional items (e.g., a sword, a compass).
-  - Use nested conditionals and logical operators to create complex outcomes.
-
-*/
+    // What’s Wrong? Syntax error, missing end quotation mark, parenthesis, and semi colon. 
+    
+    
+    // Program B
+    // Description:
+    // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
+    
+    let numbers = [2, 4, 8];
+    for (let i = 0; i < numbers.length; i++) {
+      let doubled = numbers[i] * 2;
+      console.log(doubled);
+    }
+    
+    // What’s Wrong? Runtime error, the string "eight" needed to be the number 8.
+    
+    
+    
+    // Program C (Logic Error)
+    // Description:
+    // This snippet of code is supposed to check if a given number is prime (i.e., divisible only by 1 and itself). However, it incorrectly marks some numbers as prime or not prime.
+    
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false;  // Supposed to indicate num is NOT prime
+        }
+      }
+      return true; // Supposed to indicate num IS prime
+    }
+    
+    console.log(isPrime(7)); // Expected true but gets false
+    
+    // What’s Wrong? Logic error, the return values of true and false were inverted.
+    
